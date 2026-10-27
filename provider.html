@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ספק · CZ Films</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- אפקט כוכבים ברקע -->
+<div class="stars-container">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+</div>
+
+<header class="nav">
+  <a class="logo" href="index.html"><span class="logo-play">▶</span> CZ<i>•</i>Films</a>
+  <nav class="nav-links"><a href="index.html">בית</a></nav>
+</header>
+<main id="rows"></main>
+
+<!-- חלון "ראו הכל" -->
+<div id="seeAllModal" class="modal" hidden>
+    <div class="modal-content">
+        <button class="close-modal" onclick="document.getElementById('seeAllModal').hidden = true">✕</button>
+        <h2 id="seeAllTitle" style="margin-bottom: 20px;">כל התוצאות</h2>
+        <div id="seeAllGrid" class="grid"></div>
+        <div id="pagination" class="pagination"></div>
+    </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/provider.js"></script>
+</body>
+</html>
