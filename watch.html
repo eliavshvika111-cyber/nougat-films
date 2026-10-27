@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>צפייה · CZ Films</title>
-<link rel="stylesheet" href="css/style.css">
+<title>צפייה · Nougat Films</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- אפקט כוכבים ברקע -->
 <div class="stars-container">
     <div class="stars"></div>
     <div class="stars2"></div>
@@ -15,22 +14,20 @@
 </div>
 
 <header class="nav">
-  <a class="logo" href="index.html"><span class="logo-play">▶</span> CZ<i>•</i>Films</a>
-  <nav class="nav-links"><a href="index.html">בית</a><a href="index.html?type=movie">סרטים</a><a href="index.html?type=series">סדרות</a></nav>
+  <a class="logo" href="index.html"><span class="logo-play">▶</span> Nougat<i>•</i>Films</a>
+  <nav class="nav-links"><a href="index.html">בית</a></nav>
 </header>
 <main class="watch">
   <div class="player-wrap" id="playerWrap"></div>
   
   <div class="controls-bar">
     <div class="server-buttons" id="serverButtons"></div>
-    <!-- כפתורי מעבר פרקים -->
     <div class="episode-nav-buttons" id="episodeNav" style="display: none;">
         <button id="prevEpisodeBtn" onclick="changeEpisode(-1)">פרק קודם</button>
         <button id="nextEpisodeBtn" onclick="changeEpisode(1)">פרק הבא</button>
     </div>
   </div>
 
-  <!-- אזור עונות ופרקים -->
   <div id="seasonEpisodeSelectors" style="display: none;">
       <div class="season-buttons" id="seasonSelectors"></div>
       <div class="episode-grid" id="episodeGrid"></div>
@@ -38,7 +35,7 @@
 
   <section class="info" id="info"></section>
 </main>
-<script src="js/data.js"></script>
-<script src="js/watch.js"></script>
+<script src="data.js"></script>
+<script src="watch.js"></script>
 </body>
 </html>
