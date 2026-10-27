@@ -108,14 +108,12 @@ async function loadHome() {
     const popTV = await fetchTMDB(`/tv/popular`);
     html += row("📺 סדרות פופולריות", popTV.results, 'tv', '/tv/popular');
 
-    // 🇮🇱 סרטים ישראליים
     const israeliMovies = await fetchTMDB(`/discover/movie`, { 
         with_original_language: 'he',
         sort_by: 'popularity.desc'
     });
     html += row("🇮🇱 סרטים ישראליים", israeliMovies.results, 'movie', '/discover/movie', { with_original_language: 'he' });
 
-    // 🇮🇱 סדרות ישראליות
     const israeliTV = await fetchTMDB(`/discover/tv`, { 
         with_original_language: 'he',
         sort_by: 'popularity.desc'
