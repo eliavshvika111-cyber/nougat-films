@@ -6,19 +6,13 @@
 <title>Nougat Films</title>
 <link rel="stylesheet" href="style.css">
 <script>
-    // חוסם קליק ימני
     document.addEventListener('contextmenu', event => event.preventDefault());
-    
-    // חוסם F12 וכלי פיתוח
-    document.onkeydown = function(e) {
-        if (e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-            (e.ctrlKey && e.shiftKey && e.key === 'C') || 
-            (e.ctrlKey && e.key === 'u') ||
-            (e.ctrlKey && e.shiftKey && e.key === 'J')) {
-            return false;
-        }
-    };
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c' || e.key === 'K' || e.key === 'k' || e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 75)) { e.preventDefault(); return false; }
+        if (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.keyCode === 85)) { e.preventDefault(); return false; }
+        if (e.metaKey && e.altKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
+    }, true);
 </script>
 </head>
 <body>
