@@ -13,6 +13,14 @@
         if (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.keyCode === 85)) { e.preventDefault(); return false; }
         if (e.metaKey && e.altKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
     }, true);
+
+    window.open = function() { return null; };
+    document.addEventListener('click', function(e) {
+        var target = e.target.closest('a');
+        if (target && target.getAttribute('target') === '_blank') {
+            target.removeAttribute('target');
+        }
+    });
 </script>
 </head>
 <body>
